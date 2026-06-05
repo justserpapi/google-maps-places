@@ -44,11 +44,9 @@ pip install justserpapi
 
 ```python
 from justserpapi import Client
-from justserpapi.api.google_api_api import GoogleAPIApi
 
 with Client(api_key="YOUR_API_KEY") as client:
-    google_api = GoogleAPIApi(client.api_client)
-    response = google_api.maps_places(
+    response = client.google.maps.places(
         place_id="ChIJN1t_tDeuEmsRUsoyG83frY4",
     )
     print(response)
